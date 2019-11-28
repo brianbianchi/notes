@@ -73,7 +73,7 @@ Using the example code from earlier, we must be able to swap our LuxuryVehice cl
 
 A few weeks after bragging about how awesome your Vehicle class is, you receive new requirements that allow the MSRP in your LuxuryVehicle class to be zero with added premium options. The new requirements violate the Liskov substitution principle. A way to solve that would be to create an interface for each of the vehicle classes with the appropriate method signatures. The vehicle class would have the `getHalfPrice()` method, then the LuxuryVehicle could have the `getZeroMSRPPriceWithAddedOption()`.
 
-</details
+</details>
 
 <details>
 <summary>Interface segregation principle (ISP)</summary>
