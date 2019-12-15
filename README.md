@@ -160,3 +160,113 @@ public class FacebookMessage : IMessage
 That abstraction removes the dependency of the low-level module in your high-level module. The high-level module is now completely independent of any low-level module.
 
 </details>
+
+# Security
+
+<details>
+<summary>Clickjacking</summary>
+
+*Clickjacking* is a method that tricks users into clicking on harmful links, by disguising the link as something else. Attackers can do this by building their own site with a similar domain to a popular site, including the popular site using an [iframe](https://www.w3schools.com/tags/tag_iframe.asp), and adding a transparent div, wrapped by a link tag, over the iframe. The div can be placed over the iframe by setting its [z-index](https://www.w3schools.com/cssref/pr_pos_z-index.asp) to a value higher than the iframe's z-index. The link can be used to download malware or direct the user to another site.
+
+Clickjacking has been used to do the following:
+
+* collect login credentials
+  * render a fake login box on top of the real one
+* trick users into turning on their web-cam or microphone
+  * render invisible elements over the Adobe Flash settings page
+* spread worms on social media sites
+* promote online scams by tricking people into clicking on a link
+* spread malware by diverting users to malicious download links
+
+### Protection
+
+To ensure that your site doesn’t get targeted by a clickjacking attack, you need to make sure it cannot be wrapped in an iframe. This can be done by giving the browser instructions directly via HTTP headers, or by using client-side JavaScript for older browsers (also known as frame-killing).
+
+##### X-Frame-Options
+
+The `X-Frame-Options` HTTP header can be used to indicate whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>` or `<object>` tag. It was designed specifically to help protect against clickjacking.
+
+There are three permitted values for the header:
+
+* DENY - The page cannot be displayed in a frame, regardless of the site attempting to do so.
+* SAMEORIGIN - The page can only be displayed in a frame on the same origin as the page itself.
+* ALLOW-FROM *uri* - The page can only be displayed in a frame on the specified origins.
+
+##### Content Security Policy
+
+The `Content-Security-Policy` HTTP header is part of the HTML5 standard. This header replaces and provides a broader range of protection than the `X-Frame-Options` header. It is designed in such a way that website authors can whitelist individual domains from which resources (like scripts, stylesheets, and fonts) can be loaded.
+
+To control where your site can be embedded, use the frame-ancestors directive:
+
+`Content-Security-Policy: frame-ancestors 'none'` cannot be displayed in a frame, regardless of the site attempting to do so.
+
+`Content-Security-Policy: frame-ancestors 'self'` can only be displayed in a frame on the same origin as the page itself.
+
+`Content-Security-Policy: frame-ancestors *uri*` can only be displayed in a frame on the specified origins.
+
+##### Frame-Killing
+
+In older browsers, the most common way to protect users against clickjacking was to include frame-killing JavaScript to prevent the page from being included in iframes:
+
+```html
+<style>
+  /* Hide page by default */
+  html { display : none; }
+</style>
+
+<script>
+  if (self == top) {
+    // Everything checks out, show the page
+    document.documentElement.style.display = 'block';
+  } else {
+    // Break out of the frame
+    top.location = self.location;
+  }
+</script>
+```
+
+When the page loads, this code will check that the domain of the page matches the domain of the browser window, which will not be true when the page is embedded in an iframe.
+
+</details>
+
+<details>
+<summary>Command execution</summary>
+
+
+</details>
+
+<details>
+<summary>SQL injection</summary>
+
+
+</details>
+
+<details>
+<summary>Cross site scripting (XSS)</summary>
+
+
+</details>
+
+# SQL
+
+<details>
+<summary>SQL transactions</summary>
+
+
+</details>
+
+# VIM
+
+<details>
+<summary>Cheat sheet</summary>
+
+
+</details>
+
+# Object oriented programming
+
+<details>
+<summary>C# keywords</summary>
+
+
+</details>
