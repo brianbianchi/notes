@@ -1,16 +1,35 @@
 # Algorithms
 
-1. Depth First Search
-2. Breadth First Search
-3. Matching Parenthesis problem
-4. Using Hash Tables
-5. Variables/Pointers manipulation
-6. reverse linked list (duplicates , removing duplicates)
-7. Sorting fundamentals (quick sort, merge sort, bubble sort,
-   runtime of a sort, time space complexity)
-8. Recursion
-9. Custom data structures (object oriented programming)
-10. Binary search
+<details>
+<summary>[Depth First Search](https://en.wikipedia.org/wiki/Depth-first_search)</summary>
+</details>
+<details>
+<summary>[Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search)</summary>
+</details>
+<details>
+<summary>[Matching Parenthesis problem](https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)</summary>
+</details>
+<details>
+<summary>[Hash Tables](https://en.wikipedia.org/wiki/Hash_table)</summary>
+</details>
+<details>
+<summary>[Variables/Pointers manipulation](https://en.wikipedia.org/wiki/Pointer_(computer_programming))</summary>
+</details>
+<details>
+<summary>[reverse linked list (duplicates , removing duplicates)](https://en.wikipedia.org/wiki/Linked_list)</summary>
+</details>
+<details>
+<summary>[Sorting fundamentals (quick sort, merge sort, bubble sort,runtime of a sort, time space complexity)](https://en.wikipedia.org/wiki/Sorting_algorithm)</summary>
+</details>
+<details>
+<summary>[Recursion](https://en.wikipedia.org/wiki/Recursion)</summary>
+</details>
+<details>
+<summary>[Custom data structures (object oriented programming)](https://en.wikipedia.org/wiki/Object-oriented_programming)</summary>
+</details>
+<details>
+<summary>[Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)</summary>
+</details>
 
 # SOLID principals
 
