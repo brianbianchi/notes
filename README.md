@@ -1,34 +1,46 @@
+# [Linux file system](filesystem.md)
+
 # Algorithms
 
 <details>
-<summary>[Depth First Search](https://en.wikipedia.org/wiki/Depth-first_search)</summary>
+<summary>Depth First Search</summary>
+https://en.wikipedia.org/wiki/Depth-first_search
 </details>
 <details>
-<summary>[Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search)</summary>
+<summary>Breadth First Search</summary>
+https://en.wikipedia.org/wiki/Breadth-first_search
 </details>
 <details>
-<summary>[Matching Parenthesis problem](https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)</summary>
+<summary>Matching Parenthesis problem</summary>
+https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
 </details>
 <details>
-<summary>[Hash Tables](https://en.wikipedia.org/wiki/Hash_table)</summary>
+<summary>Hash Tables</summary>
+https://en.wikipedia.org/wiki/Hash_table
 </details>
 <details>
-<summary>[Variables/Pointers manipulation](https://en.wikipedia.org/wiki/Pointer_(computer_programming))</summary>
+<summary>Variables/Pointers manipulation</summary>
+https://en.wikipedia.org/wiki/Pointer_(computer_programming)
 </details>
 <details>
-<summary>[reverse linked list (duplicates , removing duplicates)](https://en.wikipedia.org/wiki/Linked_list)</summary>
+<summary>reverse linked list (duplicates , removing duplicates)</summary>
+https://en.wikipedia.org/wiki/Linked_list
 </details>
 <details>
-<summary>[Sorting fundamentals (quick sort, merge sort, bubble sort,runtime of a sort, time space complexity)](https://en.wikipedia.org/wiki/Sorting_algorithm)</summary>
+<summary>Sorting fundamentals (quick sort, merge sort, bubble sort,runtime of a sort, time space complexity)</summary>
+https://en.wikipedia.org/wiki/Sorting_algorithm
 </details>
 <details>
-<summary>[Recursion](https://en.wikipedia.org/wiki/Recursion)</summary>
+<summary>Recursion</summary>
+https://en.wikipedia.org/wiki/Recursion
 </details>
 <details>
-<summary>[Custom data structures (object oriented programming)](https://en.wikipedia.org/wiki/Object-oriented_programming)</summary>
+<summary>Custom data structures (object oriented programming)</summary>
+https://en.wikipedia.org/wiki/Object-oriented_programming
 </details>
 <details>
-<summary>[Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)</summary>
+<summary>Binary search</summary>
+https://en.wikipedia.org/wiki/Binary_search_algorithm
 </details>
 
 # SOLID principals
