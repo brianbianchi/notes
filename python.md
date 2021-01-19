@@ -22,8 +22,8 @@
 * `x = [0,1,2,3,4,5,6] x[4:2:-1] #output: [4,3]`
 
 ## set
-* no position, unique, unorderedr
-* empty set - `set()`
+* no position, unique, unordered
+* create empty set - `set()`
 * `s = {4,5,6}`
 * `s.add(56)`
 * `s.remove(56)`
@@ -52,7 +52,7 @@ def add(x, y, z=None);
 
 ## exceptions
 * `raise Exception('error')`
-* 
+* `assert 2==3 #raises AssertionError`
 ```python
 try: 
     x=7/0
@@ -65,9 +65,11 @@ finally:
 ## lambda
 * one line anon function
 * `lambda x,y: x+y`
-* `x=[1,2,3]`
-`map(lambda i:i+2,x) #[3,4,5]`
-`filter(lambda i: i%2==0,x) #[2]`
+```python
+x=[1,2,3]`
+y=list(map(lambda i:i+2,x)) #[3,4,5]
+z=list(filter(lambda i: i%2==0,x)) #[2]
+```
 
 ## f strings
-* `f'Hello {4-56}' #'Hello -52'
+* `f'Hello {4-56}' #'Hello -52'`
