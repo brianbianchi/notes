@@ -1,5 +1,7 @@
 # Notes
 
+1. **[Machine Learning](ml.md)**
+1. **[Python](python.md)**
 1. **[Linux file system](filesystem.md)**
 1. **[Algorithms](algorithms.md)**
 1. **[SOLID principals](solid.md)**
