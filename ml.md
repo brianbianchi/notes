@@ -153,10 +153,68 @@
   * Nesterov Accelerated Gradient
 
 ## [Deep computer vision](https://colab.research.google.com/drive/1ZZXnCjFEOkp_KdNcNabd14yok0BAIuwS#forceEdit=true&sandboxMode=true)
-* ..
 
-## [Natural language processing](https://colab.research.google.com/drive/1ysEKrw_LE2jMndo1snrZUh5w87LQsCxk#forceEdit=true&sandboxMode=true)
-* ..
+### image data
+* 3 dimentional
+  * image width
+  * image height
+  * color channels (3, rgb)
+
+### Convolutional neural network
+* `dense layer` - entire image
+* `convolutional layer` - specific parts of an image where patterns exist
+  * layers work together by increasing complexity and abstraction at each subsequent layer
+  * feature map -> response map
+  * first layer might be responsible for picking up edges and short lines
+  * second layer might take as input these lines and start forming shapes or polygons
+  * last layer might take these shapes and determine which combiantions make up a specific image
+* `feature map`
+  * 3 dimentional tensor with 2 spacial axes (width, height, depth)
+* `response map`
+  * feature map with pattern filters
+* convolutional layer `parameters`
+  * filters - m x n pattern of pixels we are looking for in an image
+  * sample size - size of a filter
+* `padding` - the addition of the appropriate number of rows and/or columns to your input data such that each pixel can be centered by the filter
+* `strides` - how many rows/cols we will move the filter each time
+* `pooling`
+  * downsample our feature maps and reduce their dimensions
+  * extract windows from the feature map and return a response map of the max, min or average values of each channel
+  * usually done using windows of size 2x2 and a stride of 2
+  * reduce the size of the feature map by a factor of two and return a response map that is 2x smaller
+
+
+
+## [Natural language processing(NLP)](https://colab.research.google.com/drive/1ysEKrw_LE2jMndo1snrZUh5w87LQsCxk#forceEdit=true&sandboxMode=true)
+* `recurrent neural network (RNN)` - processing sequential data like text or characters
+  * `sentiment analysis`
+  * `character generation`
+* `feed-forward neural network` - data is fed forwards, all at once, from left to right
+
+### encoding 
+* ML models only take numeric inputs, so text needs to be encoded
+* order of words is an important property of textual data
+* `bag of words`
+  * each word is encoded as an integer
+  * tracks frequency but not order
+* `integer encoding`
+  * each word or character is encoded as a unique integer
+  * maintains order
+* `word embeddings`
+  * keeps order and encodes similar words with similar labels
+  * encodes frequency, order, and meaning
+  * encodes each word as a dense vector that represents context
+  * add embedding layer to the beggining of your model and while your model trains your embedding layer will learn the correct embeddings for words
+
+### `recurrent neural network (RNN)`
+* `simple RNN layer`
+  * processes words or input one at a time in a combination with the output from the previous iteration
+  * only effective at processing shorter sequences of text
+* `long short-term memory (LSTM)`
+  * simpleRNN + can access inputs from any timestep in the past
+  
+
+
 
 ## [Reinforcement learning](https://colab.research.google.com/drive/1IlrlS3bB8t1Gd5Pogol4MIwUxlAjhWOQ#forceEdit=true&sandboxMode=true)
 * ..
