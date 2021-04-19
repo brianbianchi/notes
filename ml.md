@@ -1,4 +1,5 @@
 # Machine learning
+* [TensorFlow](https://www.tensorflow.org/)
 * [cheat sheet](https://ml-cheatsheet.readthedocs.io/en/latest/)
 * finds rules based on data
 * AI > ML > NN
@@ -206,15 +207,32 @@
   * encodes each word as a dense vector that represents context
   * add embedding layer to the beggining of your model and while your model trains your embedding layer will learn the correct embeddings for words
 
-### `recurrent neural network (RNN)`
+### recurrent neural network (RNN)
 * `simple RNN layer`
   * processes words or input one at a time in a combination with the output from the previous iteration
   * only effective at processing shorter sequences of text
 * `long short-term memory (LSTM)`
   * simpleRNN + can access inputs from any timestep in the past
-  
-
-
 
 ## [Reinforcement learning](https://colab.research.google.com/drive/1IlrlS3bB8t1Gd5Pogol4MIwUxlAjhWOQ#forceEdit=true&sandboxMode=true)
-* ..
+* rather than feeding our machine learning model millions of examples, we let our model come up with its own examples by exploring an enviornemt
+  * learning by exploring, from mistakes and past experiences
+* `environment` - what the agent will explore
+* `agent` - entity that is exploring the environment
+* `state` - status of an agent
+* `action` - interaction between agent and environment
+* `reward`
+  * every action of the agent will result in a reward of some magnitude (positive or negative)
+  * goal of agent is to maximize its reward in an environment
+  * most important part of RL is determining how to reward agent
+
+### Q-Learning
+* based on a matrix of action-reward values (aka `Q-table` or `Q-matrix`)
+* matrix is in a shape (num possible states, num possible actions) where each value at matrix [n,m] represents the agents expected reward given they are in state n and take action m
+* Q-learning algorithm defines the way we update the values in the matrix and decide what action to take at each state
+* after a succesful training/learning of this Q-Table/matrix we can determine the action an agent should take in any state by looking at that states row in the matrix and taking the maximium value column as the action
+* `learning rate`
+  * how much change is permitted on each QTable update
+  * modifying the learning rate will change how the agent explores the enviornment and how quickly it determines the final values in the QTable
+* `discount factor`
+  * balance how much focus is put on the current and future reward
