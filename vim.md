@@ -1,15 +1,7 @@
 
-# VIM
+# VIM cheat sheet
 
-## Cheat sheet
-
-Vim is a powerful text editor that is useful to programmers, system administrators, and heavy editors of plain text files. You are likely to first experience Vim on a linux system or when trying to resolve code conflicts using git. After you read this post, I recommend that you go through the interactive tutorial by typing `vimtutor` into your command line.
-
-The command to edit a file using Vim is `vim filename.type`. There are three main modes to Vim: insert, command, and last-line.
-
-### Command Mode `esc`
-When first entering Vim, you begin in command mode. This means that all alphanumeric keys are bound to commands, rather than inserting respective characters.
-#### Movements
+### Movement
 
 `h` - one character to the left
 
@@ -27,32 +19,40 @@ When first entering Vim, you begin in command mode. This means that all alphanum
 
 `b` - backward one word
 
+`fx` – jump to next occurrence of character x
+
+`tx` - jump to before next occurrence of character x
+
+`}` – jump to next paragraph (or function/block, when editing code)
+
+`{` – jump to previous paragraph (or function/block, when editing code)
+
 `G` - to the end of the file
 
 `gg` - to the beginning of the file
+
+`i` - inner  (`di{` deletes everything in {})
+
+`a` - outer (`da{` deletes {} and everything in it)
 
 `` `. ``  - to the last edit
 
 Prefacing a movement with a number will execute the command that many times. For example, `4j` will move your cursor down four lines.
 
-#### Editing
+### Editing
 `x` - delete character
 
-`dw` - deletes from cursor to end of word
+`c` - change
 
-`d0` - delete to beginning of a line
+`d` - delete
 
-`d$` - delete to end of a line
-
-`dgg` - delete to beginning of file
-
-`dG` - delete to end of file
+`v` - select
 
 `u` - undo last operation(s)
 
 `Ctrl-r` - redo last undo(s)
 
-#### Search and Replace
+### Search and Replace
 `/text` - search for "text", going forward
 
 `n` - move cursor to next instance of searched text (wrapped at end of document)
@@ -65,7 +65,7 @@ Prefacing a movement with a number will execute the command that many times. For
 
 `:%s/text/replacement/gc` - search entire document and replace "text" with "replacement", with confirmation
 
-#### Copying and Pasting
+### Copying and Pasting
 The last bit of text you deleted is now in your buffer and is ready to be pasted.
 
 `p` - paste text after current line
@@ -81,7 +81,15 @@ The last bit of text you deleted is now in your buffer and is ready to be pasted
 `y` - yank text, after highlighting, place into buffer
 
 ### Insert Mode `i`
-This mode allows you to insert the respective characters you type on your keyboard. To go back to command mode, use `esc`.
+`i` - insert before cursor
+
+`a` - insert after cursor
+
+`o` - new line after
+
+`O` - new line before
+
+`ea` - insert at the end of the word
 
 ### Last-line Mode `:`
 `:q` - quit the editor
@@ -90,4 +98,6 @@ This mode allows you to insert the respective characters you type on your keyboa
 
 `:w {filename}` - write (save) the file
 
-`:ZZ` - save and quit
+`:ZZ` - quit and save
+
+`:ZQ` - quit without saving
